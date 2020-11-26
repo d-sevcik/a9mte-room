@@ -2,7 +2,6 @@
 package utb.d_sevcik.room
 
 import android.content.Context
-import androidx.room.Dao
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
@@ -46,11 +45,11 @@ public abstract class WordRoomDatabase : RoomDatabase() {
 
         suspend fun populateDatabase(wordDao: WordDao) {
             wordDao.deleteAll()
-            wordDao.insert(Word(0, "Android"))
-            wordDao.insert(Word(1, "není"))
-            wordDao.insert(Word(2, "lepší"))
-            wordDao.insert(Word(3, "než"))
-            wordDao.insert(Word(4, "iOS"))
+            wordDao.insert(Word("Android"))
+            wordDao.insert(Word("není"))
+            wordDao.insert(Word("lepší"))
+            wordDao.insert(Word("než"))
+            wordDao.insert(Word("iOS"))
         }
     }
 
